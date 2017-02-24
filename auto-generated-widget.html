@@ -2442,7 +2442,7 @@ cpdefine("inline:com-chilipeppr-widget-gcode", ["chilipeppr_ready", "waypoints",
                 //this could also exit the onFileLoaded function, but failsafe would be to let this method continue in background and reissue once units selected by user.
                 this.showUOMModal(txt,info, skipLocalStore);
             }
-            var u = txt.exec(/(G20|G21)/i);
+            var u = /(G20|G21)/i.exec(txt);
             console.info(u);
             
             // create flag to know if we did anything in this method

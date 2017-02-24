@@ -1,4 +1,5 @@
 // Load additional files via Chilipeppr's require.js
+/* global $ */
 requirejs.config({
     paths: {
         //jqueryui: '//chilipeppr.com/js/jquery-ui-1.10.4/ui/minified/jquery.ui.core.min',
@@ -2174,6 +2175,8 @@ cpdefine("inline:com-chilipeppr-widget-gcode", ["chilipeppr_ready", "waypoints",
                 //this could also exit the onFileLoaded function, but failsafe would be to let this method continue in background and reissue once units selected by user.
                 this.showUOMModal(txt,info, skipLocalStore);
             }
+            var u = txt.exec(/(G20|G21)/i);
+            console.info(u);
             
             // create flag to know if we did anything in this method
             // where we actually added/removed any lines of gcode cuz

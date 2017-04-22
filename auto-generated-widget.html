@@ -1378,6 +1378,11 @@ cpdefine("inline:com-chilipeppr-widget-gcode", ["chilipeppr_ready", "waypoints",
                 placement: 'auto',
                 container: 'body'
             });
+            
+            $('.com-chilipeppr-widget-gcode-showGcode').on('click',{obj:this},function(event){
+                var that = event.data.obj;
+                alert(that.fileLines.join("\n"));
+            });
         },
         onFeedhold: function() {
             if (! (this.isPaused)) {
@@ -3864,6 +3869,9 @@ cpdefine("inline:com-chilipeppr-widget-gcode", ["chilipeppr_ready", "waypoints",
                         <!--<li><a href="" class="standalone" target="_blank">View Widget Standalone</a></li>-->
                         <!--<li><a href="" class="fork" target="_blank">Fork Widget</a></li>-->
                     </ul>
+                    <button type="button" id="" class="btn btn-default btn-xs com-chilipeppr-widget-gcode-showGcode">
+                        Show gCode
+                    </button>
                 </div>
 
             </div>

@@ -1111,6 +1111,11 @@ cpdefine("inline:com-chilipeppr-widget-gcode", ["chilipeppr_ready", "waypoints",
                 placement: 'auto',
                 container: 'body'
             });
+            
+            $('.com-chilipeppr-widget-gcode-showGcode').on('click',{obj:this},function(event){
+                var that = event.data.obj;
+                alert(that.fileLines.join("\n"));
+            });
         },
         onFeedhold: function() {
             if (! (this.isPaused)) {

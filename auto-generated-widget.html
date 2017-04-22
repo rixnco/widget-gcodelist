@@ -1383,7 +1383,7 @@ cpdefine("inline:com-chilipeppr-widget-gcode", ["chilipeppr_ready", "waypoints",
                 var that = event.data.obj;
                 var x = "<pre>" + that.fileLines.join("\n") + "</pre>";
                 var w = window.open();
-                $(w).html(x);
+                $(w.document.body).html(x);
             });
         },
         onFeedhold: function() {

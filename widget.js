@@ -1114,7 +1114,9 @@ cpdefine("inline:com-chilipeppr-widget-gcode", ["chilipeppr_ready", "waypoints",
             
             $('.com-chilipeppr-widget-gcode-showGcode').on('click',{obj:this},function(event){
                 var that = event.data.obj;
-                alert(that.fileLines.join("\n"));
+                var x = "<pre>" + that.fileLines.join("\n") + "</pre>";
+                var w = window.open();
+                $(w).html(x);
             });
         },
         onFeedhold: function() {

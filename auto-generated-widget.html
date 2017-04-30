@@ -2451,6 +2451,7 @@ cpdefine("inline:com-chilipeppr-widget-gcode", ["chilipeppr_ready", "waypoints",
             }
             var u = /(G20|G21)/i.exec(txt);
             if(u){
+                alert(u[1]);
             chilipeppr.publish("/com-chilipeppr-interface-cnccontroller/coordinateUnits", u[1]);
             }
             // create flag to know if we did anything in this method

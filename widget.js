@@ -2183,9 +2183,7 @@ cpdefine("inline:com-chilipeppr-widget-gcode", ["chilipeppr_ready", "waypoints",
                 this.showUOMModal(txt,info, skipLocalStore);
             }
             var u = /(G20|G21)/i.exec(txt);
-            console.warn('at file loaded regex');
             if(u){
-                console.warn(u[1]);
                 chilipeppr.publish("/com-chilipeppr-interface-cnccontroller/coordinateUnits", u[1]);
             }
             

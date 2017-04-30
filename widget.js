@@ -2183,10 +2183,11 @@ cpdefine("inline:com-chilipeppr-widget-gcode", ["chilipeppr_ready", "waypoints",
                 this.showUOMModal(txt,info, skipLocalStore);
             }
             var u = /(G20|G21)/i.exec(txt);
+            
             if(u){
-                alert(u[1]);
-            chilipeppr.publish("/com-chilipeppr-interface-cnccontroller/coordinateUnits", u[1]);
+                chilipeppr.publish("/com-chilipeppr-interface-cnccontroller/coordinateUnits", u[1]);
             }
+            
             // create flag to know if we did anything in this method
             // where we actually added/removed any lines of gcode cuz
             // then at end of method we need to re-send the gcode back

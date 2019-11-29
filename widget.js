@@ -43,7 +43,7 @@ cprequire_test(["inline:com-chilipeppr-widget-gcode"], function (gcode) {
 
     // add flash msg
     chilipeppr.load(
-        "http://fiddle.jshell.net/chilipeppr/90698kax/show/light",
+        "http://raw.githubusercontent.com/rixnco/element-flash/master/auto-generated-widget.html",
         function() {
             cprequire(
                 ['inline:com-chilipeppr-elem-flashmsg'],

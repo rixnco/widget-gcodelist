@@ -309,9 +309,8 @@ cprequire_test(["inline:com-chilipeppr-widget-gcode"], function (gcode) {
      */
 
     // add flash msg
-   chilipeppr.load(
-        // "http://fiddle.jshell.net/chilipeppr/90698kax/show/light",
-        "http://raw.githubusercontent.com/chilipeppr/element-flash/master/auto-generated-widget.html",
+    chilipeppr.load(
+        "http://fiddle.jshell.net/chilipeppr/90698kax/show/light",
         function() {
             cprequire(
                 ['inline:com-chilipeppr-elem-flashmsg'],
@@ -322,15 +321,13 @@ cprequire_test(["inline:com-chilipeppr-widget-gcode"], function (gcode) {
             );
         }
     );
-    
+
     // create a div to hold dragdrop
     // Element / Drag Drop
     // http://jsfiddle.net/jlauer/Q654J/
 
-   chilipeppr.load("dragdrop",
-        // "http://fiddle.jshell.net/jlauer/Z9F6G/show/light/", 
-        "http://raw.githubusercontent.com/chilipeppr/elem-dragdrop/master/auto-generated-widget.html",
-        function () {
+    chilipeppr.load("dragdrop",
+        "http://fiddle.jshell.net/jlauer/Z9F6G/show/light/", function () {
             require(["inline:com-chilipeppr-elem-dragdrop"], function (dd) {
                 console.log("inside require of dragdrop");
                 dd.init();
@@ -340,6 +337,7 @@ cprequire_test(["inline:com-chilipeppr-widget-gcode"], function (gcode) {
                 console.log(dd);
             });
         });
+
     var testPlannerPause = function() {
         setTimeout(function() {chilipeppr.publish('/com-chilipeppr-interface-cnccontroller/plannerpause', "");}, 5000);
         setTimeout(function() {chilipeppr.publish('/com-chilipeppr-interface-cnccontroller/plannerresume', "");}, 10000);
@@ -474,10 +472,10 @@ cprequire_test(["inline:com-chilipeppr-widget-gcode"], function (gcode) {
 cpdefine("inline:com-chilipeppr-widget-gcode", ["chilipeppr_ready", "waypoints", "jqueryuiResizeable", "jquerycookie"], function () {
     return {
         id: "com-chilipeppr-widget-gcode",
-        url: "http://raw.githubusercontent.com/jpadie/widget-gcodelist-jpaFork/master/auto-generated-widget.html",       // The final URL of the working widget as a single HTML file with CSS and Javascript inlined. You can let runme.js auto fill this if you are using Cloud9.
-        fiddleurl: "http://ide.c9.io/jpadie/gcode_list_jpa_fork", // The edit URL. This can be auto-filled by runme.js in Cloud9 if you'd like, or just define it on your own to help people know where they can edit/fork your widget
-        githuburl: "http://github.com/jpadie/widget-gcodelist-jpaFork", // The backing github repo
-        testurl: "http://gcode_list_jpa_fork-jpadie.c9users.io/widget.html",   // The standalone working widget so can view it working by itself
+        url: "http://raw.githubusercontent.com/rixnco/widget-gcodelist/master/auto-generated-widget.html",       // The final URL of the working widget as a single HTML file with CSS and Javascript inlined. You can let runme.js auto fill this if you are using Cloud9.
+        fiddleurl: "http://ide.c9.io/undefined/undefined", // The edit URL. This can be auto-filled by runme.js in Cloud9 if you'd like, or just define it on your own to help people know where they can edit/fork your widget
+        githuburl: "http://github.com/rixnco/widget-gcodelist", // The backing github repo
+        testurl: "http://undefined-undefined.c9users.io/widget.html",   // The standalone working widget so can view it working by itself
         name: "Widget / Gcode v8",
         desc: "The Gcode widget shows you the Gcode loaded into your workspace, lets you send it to the serial port, get back per line status, see an estimated length of time to execute the Gcode, navigate to the XYZ position of a specific line, and much more.",
         publish: {
@@ -1468,10 +1466,7 @@ cpdefine("inline:com-chilipeppr-widget-gcode", ["chilipeppr_ready", "waypoints",
             // load the pubsub viewer / fork element which decorates our upper right pulldown
             // menu with the ability to see the pubsubs from this widget and the forking links
             var that = this;
-            chilipeppr.load(
-                // "http://fiddle.jshell.net/chilipeppr/zMbL9/show/light/", 
-                "http://raw.githubusercontent.com/chilipeppr/widget-pubsubviewer/master/auto-generated-widget.html", 
-                function () {
+            chilipeppr.load("https://raw.githubusercontent.com/chilipeppr/widget-pubsubviewer/master/auto-generated-widget.html", function () {
                 require(['inline:com-chilipeppr-elem-pubsubviewer'], function (pubsubviewer) {
                     pubsubviewer.attachTo($(topCssSelector + ' .panel-heading .pubsub-dropdown-menu'), that);
                 });
@@ -3760,8 +3755,8 @@ cpdefine("inline:com-chilipeppr-widget-gcode", ["chilipeppr_ready", "waypoints",
         gcodeLoad: function (callback, context) {
             var that = this;
             chilipeppr.load("com-chilipeppr-elem-gcodedata",
-                //"http://fiddle.jshell.net/chilipeppr/QPG2v/show/light/",
-                "http://raw.githubusercontent.com/chilipeppr/element-gcodedata/master/auto-generated-widget.html",
+                "http://fiddle.jshell.net/chilipeppr/QPG2v/show/light/",
+
                 function () {
                     cprequire(["inline:com-chilipeppr-elem-gcodedata"], function (gcd) {
                         console.log("in callback from chilipeppr.load() for gcodedata");

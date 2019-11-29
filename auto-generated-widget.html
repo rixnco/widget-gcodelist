@@ -560,12 +560,12 @@ cpdefine("inline:com-chilipeppr-widget-gcode", ["chilipeppr_ready", "waypoints",
             // so we know when our gcode is executed by spjs
             this.setupOnQueueWriteCompletePubSub();
 
-            // load jquery-ui css, but make sure nobody else loaded it
-            if (!$("link[href='//code.jquery.com/ui/1.10.4/themes/smoothness/jquery-ui.css']").length)
-                $('<link>')
-                    .appendTo('head')
-                    .attr({type : 'text/css', rel : 'stylesheet'})
-                    .attr('href', '//code.jquery.com/ui/1.10.4/themes/smoothness/jquery-ui.css');
+            // // load jquery-ui css, but make sure nobody else loaded it
+            // if (!$("link[href='//code.jquery.com/ui/1.10.4/themes/smoothness/jquery-ui.css']").length)
+            //     $('<link>')
+            //         .appendTo('head')
+            //         .attr({type : 'text/css', rel : 'stylesheet'})
+            //         .attr('href', '//code.jquery.com/ui/1.10.4/themes/smoothness/jquery-ui.css');
 
             // load local file
             //localStorage.removeItem('last-imported');

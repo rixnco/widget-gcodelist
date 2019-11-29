@@ -60,7 +60,7 @@ cprequire_test(["inline:com-chilipeppr-widget-gcode"], function (gcode) {
     // http://jsfiddle.net/jlauer/Q654J/
 
     chilipeppr.load("dragdrop",
-        "http://fiddle.jshell.net/jlauer/Z9F6G/show/light/", function () {
+        "http://raw.githubusercontent.com/chilipeppr/elem-dragdrop/master/auto-generated-widget.html", function () {
             require(["inline:com-chilipeppr-elem-dragdrop"], function (dd) {
                 console.log("inside require of dragdrop");
                 dd.init();
@@ -3488,7 +3488,7 @@ cpdefine("inline:com-chilipeppr-widget-gcode", ["chilipeppr_ready", "waypoints",
         gcodeLoad: function (callback, context) {
             var that = this;
             chilipeppr.load("com-chilipeppr-elem-gcodedata",
-                "http://fiddle.jshell.net/chilipeppr/QPG2v/show/light/",
+                "http://raw.githubusercontent.com/chilipeppr/element-gcodedata/master/auto-generated-widget.html",
 
                 function () {
                     cprequire(["inline:com-chilipeppr-elem-gcodedata"], function (gcd) {
